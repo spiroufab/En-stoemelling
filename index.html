@@ -1,182 +1,60 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dikkenek Peï — En Stoemeling</title>
-  <meta name="description" content="Dikkenek Peï — dico brusseleir, anecdotes belges, playlist et easter eggs. Scanne et rigole." />
-  <style>
-    :root{--bg:#0b0b0b;--card:#111;--accent:#f4d35e;--muted:#cfcfcf;--red:#d62e2e}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:var(--muted);background:linear-gradient(180deg,#050505 0%, #0b0b0b 100%)}
-    .wrap{max-width:1100px;margin:12px auto;padding:18px}
-    header{display:flex;align-items:center;gap:14px}
-    .logo{width:86px;height:86px;border-radius:12px;background:linear-gradient(135deg,#222,#111);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(0,0,0,.6)}
-    .logo h1{margin:0;font-size:20px;color:var(--accent);letter-spacing:1px}
-    h1,h2,h3{margin:6px 0;color:var(--accent)}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:980px){.grid{grid-template-columns:360px 1fr}}
-    .card{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .small{font-size:13px;color:#a9a9a9}
-    .btn{display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#000;font-weight:700;text-decoration:none;margin:6px 6px 6px 0}
-    .muted{color:#9b9b9b}
-    ul{padding-left:18px;margin:6px 0}
-    .fact{margin:8px 0;padding:10px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));}
-    footer{margin-top:18px;padding:12px;text-align:center;color:#8f8f8f;font-size:13px}
-    .tag{display:inline-block;padding:6px 8px;margin:4px;border-radius:999px;background:#111;color:var(--accent);font-weight:700}
-    .qr{display:flex;justify-content:center}
-    a.external{color:var(--accent);text-decoration:underline}
-    .phrase{padding:12px;background:#080808;border-radius:8px;font-weight:700}
-    .bd-bg{position:fixed;inset:0;opacity:.04;background-image: url('assets/bg-bd.png');background-repeat:repeat;background-size:400px;pointer-events:none}
-  </style>
-</head>
-<body>
-  <div class="bd-bg" aria-hidden="true"></div>
-  <div class="wrap">
-    <header>
-      <div class="logo" aria-hidden="true"><h1>DP</h1></div>
-      <div>
-        <h1>Dikkenek Peï — En Stoemeling</h1>
-        <div class="small">La page officielle (fun & informative) – Scanne, rigole, partage la frite.</div>
-      </div>
-    </header>
-
-    <main class="grid">
-      <aside class="card" aria-label="Informations vitales">
-        <h3>Infos vitales</h3>
-        <div class="small">
-          <strong>Nom :</strong> Fabian Hordies<br>
-          <strong>Naissance :</strong> 22/09/1980<br>
-          <strong>Groupe sanguin :</strong> A+<br>
-          <strong>Localisation :</strong> Dongelberg, Belgique<br>
-          <strong>Médecin :</strong> Dr Estelle Jaspard
-        </div>
-
-        <hr style="margin:12px 0;border:none;border-top:1px dashed rgba(255,255,255,0.03)">
-        <h3>Actions rapides</h3>
-        <div style="margin-top:8px">
-          <a class="btn" href="#easter">▶ Easter egg audio</a>
-          <a class="btn" href="#dico">▶ Parle-moi belge</a>
-        </div>
-
-        <hr style="margin:12px 0;border:none;border-top:1px dashed rgba(255,255,255,0.03)">
-        <h3>QR pour impression</h3>
-        <div class="qr" style="margin-top:6px">
-          <!-- Le QR final sera inséré ici par remplacement (SVG/PNG). -->
-          <img id="qrImg" src="assets/qr-placeholder.png" alt="QR code Dikkenek Peï" style="width:180px;height:180px;border-radius:8px;background:#fff;padding:6px"/>
-        </div>
-        <div class="small muted" style="margin-top:8px">Télécharge en PNG/SVG 300dpi pour impression sur patch ou transfert textile. Laisse une marge blanche.</div>
-      </aside>
-
-      <section>
-        <article class="card">
-          <h2 id="welcome">Bienvenue — mode d'emploi brusseleir</h2>
-          <p class="small">Tu viens de tomber sur la page <strong>Dikkenek Peï</strong> — mélange de fierté belge, zwanze et anecdotes qui étonnent. Conçu pour tout âge : drôle, instructif et surprenant.</p>
-        </article>
-
-        <article class="card" id="dico">
-          <h2>Dico Brusseleir & Biker</h2>
-          <div class="fact"><strong>Zinneke</strong> — Bruxellois mixte. <span class="muted">"J’suis un zinneke, moitié stoem, moitié génie."</span></div>
-          <div class="fact"><strong>En stoemeling</strong> — en douce, discret. <span class="muted">"Il est venu en stoemeling et a pris la dernière frite."</span></div>
-          <div class="fact"><strong>Purée de patates</strong> — étonnement / juron léger.</div>
-          <div class="fact"><strong>Klet</strong> — bourrade / surnom affectueux.<br><strong>Attitude biker :</strong> <em>"Toudi à fond"</em> — toujours à fond, mais en stoem.</div>
-          <div style="margin-top:10px"><a class="btn" href="#random" onclick="randomExpr(event)">Parle-moi belge</a> <span class="small muted">(générateur aléatoire)</span></div>
-        </article>
-
-        <article class="card">
-          <h2>La Belgique qui a fait bouger le monde</h2>
-          <ul>
-            <li><strong>Adolphe Sax</strong> — inventeur du saxophone (Dinant). 🎷</li>
-            <li><strong>Georges Lemaître</strong> — cosmologue, idée du Big Bang. 💥</li>
-            <li><strong>Leo Baekeland</strong> — bakélite (plastique). 🔧</li>
-            <li><strong>Jean Neuhaus</strong> — la praline (Bruxelles). 🍫</li>
-            <li><strong>Pierre Minuit</strong> — figure liée à Manhattan (anecdote historique). 🗽</li>
-            <li><strong>Cartamundi</strong> (Turnhout) — cartes de poker, utilisées mondialement (y compris Las Vegas). ♠️</li>
-            <li><strong>Dirk Frimout</strong> — premier astronaute belge. 🚀</li>
-            <li><strong>Marcelle Finné</strong> — peintre etterbeekoise (clin d’œil artistique). 🖌️</li>
-            <li><strong>Amélie Nothomb</strong> — romancière prolifique et unique. 📚</li>
-            <li><strong>Jacques Brel</strong> — la voix qui parle au cœur. 🎤</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2>Fun facts & pépites</h2>
-          <div class="fact">Les frites ? Belges. Le chocolat ? Belge. Le saxophone ? Belge. Les cartes de poker de Las Vegas ? Souvent produites à Turnhout.</div>
-          <div class="fact">Expo 58 et l’Atomium : symbole d’optimisme et d’audace belge.</div>
-          <div class="fact">La Belgique est pionnière en BD, en chimie des matériaux, en musique et en science (De Lemaître au web).</div>
-        </article>
-
-        <article class="card">
-          <h2 id="media">Media & easter eggs</h2>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="#" onclick="openEmbed('spotify')">▶ Playlist Spotify</a>
-            <a class="btn" href="#" onclick="openEmbed('tich')">▶ Tich à l'église</a>
-            <a class="btn" href="#" onclick="openEmbed('dikk')">▶ Dikkenek (extraits)</a>
-            <a class="btn" href="#easter">▶ Easter egg audio</a>
-          </div>
-          <div id="embedArea" style="margin-top:12px"></div>
-        </article>
-
-        <article class="card odd">
-          <h2>Figures & inventions (détaillé)</h2>
-          <p class="small muted">Exploration ludique et sourcée des Belges qui ont semé des idées partout. Clique sur un bouton média pour voir des exemples.</p>
-          <ul>
-            <li>Joseph Plateau — proto-cinéma (phenakistiscope)</li>
-            <li>Georges Lemaître — cosmologie</li>
-            <li>Adolphe Sax — saxophone</li>
-            <li>Leo Baekeland — bakélite</li>
-            <li>Pierre Minuit — Manhattan (anecdote)</li>
-            <li>Cartamundi — cartes à jouer</li>
-            <li>Jean Neuhaus — praline</li>
-            <li>Van Eyck — révolution peinture à l'huile</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h2 id="random">Générateur d’expression</h2>
-          <div id="phrase" class="phrase">Allez va, t’es un vrai ket !</div>
-          <div style="margin-top:8px"><a class="btn" href="#" onclick="randomExpr(event)">Donne-m'en une autre</a></div>
-        </article>
-
-      </section>
-    </main>
-
-    <footer>
-      <div class="small">Dikkenek Peï — page créée pour Fabian H. • Respecte la zwanze, partage la frite. • <a class="external" href="https://github.com/" target="_blank" rel="noopener">GitHub Pages</a></div>
-    </footer>
-
-    <!-- Hidden audio element for easter egg -->
-    <audio id="easterAudio" src="assets/audio/allez_va.mp3" preload="none"></audio>
-  </div>
-
-  <script>
-    const expr = [
-      "Allez va, t’es un vrai ket !",
-      "Purée de patates, qu’est-ce qu’il fait froid !",
-      "Zinneke pour la vie, mec.",
-      "En stoemeling, on part en balade.",
-      "Toudi à fond, mais en stoem."
-    ];
-    function randomExpr(e){if(e) e.preventDefault();document.getElementById('phrase').textContent=expr[Math.floor(Math.random()*expr.length)];}
-
-    function openEmbed(which){
-      const area=document.getElementById('embedArea');
-      area.innerHTML='';
-      if(which==='spotify'){
-        area.innerHTML = '<iframe src="https://open.spotify.com/embed/playlist/PUT_YOUR_PLAYLIST_ID" width="100%" height="380" frameborder="0" allow="encrypted-media" loading="lazy"></iframe>';
-      } else if(which==='tich'){
-        area.innerHTML = '<iframe width="100%" height="315" loading="lazy" src="https://www.youtube.com/embed/PUT_TICH_VIDEO_ID" title="Tich à l\\'église" frameborder="0" allowfullscreen></iframe>';
-      } else if(which==='dikk'){
-        area.innerHTML = '<iframe width="100%" height="315" loading="lazy" src="https://www.youtube.com/embed/PUT_DIKKENEK_CLIP_ID" title="Dikkenek extrait" frameborder="0" allowfullscreen></iframe>';
-      }
-      area.scrollIntoView({behavior:'smooth'});
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nostalgie Belge Années 80</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f3e7;
+        margin: 0;
+        padding: 0;
+        color: #333;
     }
-
-    // Easter egg audio playback
-    document.querySelectorAll('a[href="#easter"]').forEach(a=>a.addEventListener('click',function(e){e.preventDefault();const ael=document.getElementById('easterAudio');if(!ael.src){alert('Audio non encore installé — je peux l\\'uploader si tu me donnes l\\'audio.');return;}ael.play();}));
-
-    // Replace QR placeholder with real SVG (if provided dynamically)
-    // If you want me to generate and inject the QR here after hosting, je m'en occupe.
-  </script>
-</body>
-</html>
+    header {
+        background-color: #d40000;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+    }
+    .content {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    .section {
+        margin-bottom: 40px;
+    }
+    .section h2 {
+        border-bottom: 2px solid #d40000;
+        padding-bottom: 5px;
+    }
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .gallery img {
+        width: 200px;
+        height: auto;
+    }
+    blockquote {
+        font-style: italic;
+        color: #555;
+        border-left: 4px solid #d40000;
+        padding-left: 10px;
+        margin: 20px 0;
+    }
+    footer {
+        background-color
