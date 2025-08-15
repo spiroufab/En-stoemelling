@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>En Stoemelling — Belgique, BD & Années 80</title>
+<meta name="description" content="Nostalgie belge: BD, motos, anecdotes, traditions. Choisis ton style visuel et explore !">
+<style>
+  :root{
+    --bg:#0b0b14; --fg:#e8f6ff; --accent:#ff5cf7; --accent2:#00f0ff; --card:#141424; --muted:#b7c7d3;
+    --shadow:0 8px 24px rgba(0,0,0,.3);
+    --radius:16px;
+  }
+  /* Thèmes */
+  body.theme-neon80{ --bg:#0b0b14; --fg:#e8f6ff; --accent:#ff5cf7; --accent2:#00f0ff; --card:#141424; --muted:#b7c7d3; }
+  body.theme-bd{ --bg:#fffdf7; --fg:#111; --accent:#e51b23; --accent2:#0066cc; --card:#ffffff; --muted:#555; }
+  body.theme-biker{ --bg:#0a0a0a; --fg:#f2f2f2; --accent:#ffb000; --accent2:#9ad100; --card:#141414; --muted:#cfcfcf; }
+  body.theme-vintage{ --bg:#f7f2e8; --fg:#2b2b2b; --accent:#9c5d2f; --accent2:#4a7a6a; --card:#fffaf0; --muted:#5f5a55; }
+
+  /* Base */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    line-height:1.6;
+  }
+  header{
+    position:sticky;top:0;z-index:10;background:linear-gradient(90deg, var(--card), transparent 60%), var(--bg);
+    border-bottom:1px solid rgba(255,255,255,.08); backdrop-filter:saturate(140%) blur(6px);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:16px}
+  .title{display:flex;gap:12px;align-items:center;justify-content:space-between}
+  .title h1{margin:0;font-size:clamp(20px,4.5vw,36px)}
+  .subtitle{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+
+  /* Switcher de thèmes */
+  .themes{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{
+    border:1px solid rgba(255,255,255,.15); color:var(--fg); background:linear-gradient(180deg, rgba(255,255,255,.06), transparent);
+    padding:10px 12px; border-radius:999px; cursor:pointer; box-shadow:var(--shadow); font-weight:600
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.active{outline:2px solid var(--accent);}
+
+  /* Sections */
+  section{padding:22px 16px}
+  .card{
+    background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:18px;
+  }
+  h2{margin:0 0 12px;font-size:clamp(18px,3.5vw,26px); color:var(--accent)}
+  p,li{font-size:clamp(14px,2.5vw,18px)}
+
+  /* Citation colibri */
+  .quote{
+    border-left:6px solid var(--accent2); padding:12px 16px; background:linear-gradient(90deg, rgba(255,255,255,.06), transparent);
+    font-style:italic; border-radius:8px; margin:0
+  }
+
+  /* Grilles */
+  .grid{display:grid; gap:12px}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:900px){ .grid.cols-4{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .grid.cols-3,.grid.cols-4{grid-template-columns:1fr} }
+
+  .tile{
+    background:linear-gradient(180deg, rgba(255,255,255,.06), transparent);
+    border:1px solid rgba(255,255,255,.08); border-radius:12px; overflow:hidden
+  }
+  .tile img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+  .tile .cap{padding:10px;color:var(--muted);font-size:.95rem}
+
+  /* Album perso miniatures */
+  .thumbs{display:flex;gap:8px;flex-wrap:wrap}
+  .thumb{
+    width:92px;height:92px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#0002
+  }
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* QR */
+  .qrbox{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .qrbox img{width:132px;height:132px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#fff}
+
+  /* Liens */
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  footer{border-top:1px solid rgba(255,255,255,.08);padding:22px 16px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body class="theme-neon80">
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <div>
+          <h1>🇧🇪 En Stoemelling</h1>
+          <div class="subtitle">Nostalgie 80’s • BD belges • Motos • Anecdotes surprenantes</div>
+        </div>
+        <div class="themes" role="tablist" aria-label="Choix du style">
+          <button class="btn active" data-theme="theme-neon80" role="tab" aria-selected="true">Années 80</button>
+          <button class="btn" data-theme="theme-bd" role="tab">BD belge</button>
+          <button class="btn" data-theme="theme-biker" role="tab">Biker</button>
+          <button class="btn" data-theme="theme-vintage" role="tab">Vintage</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Citation colibri -->
+    <section>
+      <div class="card">
+        <h2>🐦 La légende du colibri</h2>
+        <p class="quote">« Je fais ma part. » — Légende du colibri</p>
+        <details style="margin-top:10px"><summary>Lire l’histoire complète</summary>
+          <p>Un grand incendie ravage la forêt. Les animaux, impuissants, regardent. Seul le colibri transporte goutte après goutte de l’eau pour lutter contre les flammes. On lui dit : “Tu n’éteindras pas le feu avec ça !” Il répond : “Je le sais, mais je fais ma part.”</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Galeries images (monuments / BD / motos / objets) -->
+    <section>
+      <div class="card">
+        <h2>🖼 Galerie belge</h2>
+        <div class="grid cols-4">
+          <figure class="tile">
+            <img src="images/atomium.jpg" alt="Atomium, Bruxelles">
+            <figcaption class="cap">Atomium (Expo 58)</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/grand-place.jpg" alt="Grand-Place de Bruxelles">
+            <figcaption class="cap">Grand-Place, Bruxelles</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/bd-spirou.jpg" alt="Spirou (illustration)">
+            <figcaption class="cap">Clin d’œil à Spirou*</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/bd-tintin.jpg" alt="Tintin (illustration)">
+            <figcaption class="cap">Clin d’œil à Tintin*</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/moto-belge.jpg" alt="Motard sur route belge">
+            <figcaption class="cap">Route belge & biker</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/frites.jpg" alt="Cornet de frites">
+            <figcaption class="cap">Cornet de frites</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/moules.jpg" alt="Moules marinières">
+            <figcaption class="cap">Moules (team casserole 😄)</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="images/z900.jpg" alt="Kawasaki Z900, décor belge">
+            <figcaption class="cap">Z900 en décor belge</figcaption>
+          </figure>
+        </div>
+        <p style="margin-top:8px;color:var(--muted);font-size:.9rem">*Utilise des visuels libres de droits ou des fan-arts autorisés pour les BD.</p>
+      </div>
+    </section>
+
+    <!-- Anecdotes surprenantes -->
+    <section>
+      <div class="card">
+        <h2>🤯 Anecdotes belges à raconter au comptoir</h2>
+        <ul>
+          <li>Manhattan fut acheté en 1626 par <strong>Pierre Minuit</strong>, né dans les Pays-Bas méridionaux (actuelle Belgique).</li>
+          <li>Le <strong>saxophone</strong> est belge (Adolphe Sax, Dinant).</li>
+          <li>Le <strong>Big Bang</strong> ? Théorisé par le chanoine belge <strong>Georges Lemaître</strong>.</li>
+          <li>Anvers traite la majorité des <strong>diamants</strong> du monde.</li>
+          <li>Record politique : plus de <strong>500 jours</strong> sans gouvernement fédéral.</li>
+          <li>Traditions UNESCO : <strong>Gilles de Binche</strong>, <strong>joutes sur échasses</strong> à Namur, <strong>Meyboom</strong> à Bruxelles.</li>
+        </ul>
+        <p style="margin:.5rem 0 0">🔗 Pistes à explorer :
+          <a href="https://fr.wikipedia.org/wiki/Georges_Lema%C3%AEtre" target="_blank" rel="noopener">Lemaître</a> ·
+          <a href="https://fr.wikipedia.org/wiki/Adolphe_Sax" target="_blank" rel="noopener">Adolphe Sax</a> ·
+          <a href="https://fr.wikipedia.org/wiki/Pierre_Minuit" target="_blank" rel="noopener">Pierre Minuit</a> ·
+          <a href="https://fr.wikipedia.org/wiki/Manneken-Pis" target="_blank" rel="noopener">Manneken-Pis</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Sons & vidéos (liens) -->
+    <section>
+      <div class="card">
+        <h2>🎧 Sons, clips & archives (liens)</h2>
+        <ul>
+          <li>Plastic Bertrand — <a href="https://www.youtube.com/watch?v=VT-SFgkVlno" target="_blank" rel="noopener">Ça plane pour moi</a></li>
+          <li>Lio — <a href="https://www.youtube.com/watch?v=Zkqp5fVYwV8" target="_blank" rel="noopener">Banana Split</a></li>
+          <li>Jacques Brel — <a href="https://www.youtube.com/results?search_query=jacques+brel+best+of" target="_blank" rel="noopener">Best of</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Album perso (miniatures à compléter) -->
+    <section>
+      <div class="card">
+        <h2>📷 Album perso (miniatures)</h2>
+        <p>Mets tes photos validées dans <code>/images</code> puis ajoute leurs noms ci-dessous.</p>
+        <div class="thumbs" id="album">
+          <!-- Exemples (remplace ou supprime) -->
+          <div class="thumb"><img src="images/perso-1.jpg" alt="Perso 1"></div>
+          <div class="thumb"><img src="images/perso-2.jpg" alt="Perso 2"></div>
+          <div class="thumb"><img src="images/perso-3.jpg" alt="Perso 3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QR code du site -->
+    <section>
+      <div class="card">
+        <h2>🔗 Scanne & reviens quand tu veux</h2>
+        <div class="qrbox">
+          <img id="qrcode" alt="QR code vers le site">
+          <div>
+            <p>Ce QR mène ici : <a id="siteLink" href="https://spiroufab.github.io/En-stoemelling/" target="_blank" rel="noopener">spiroufab.github.io/En-stoemelling</a></p>
+            <p style="color:var(--muted);font-size:.95rem">Astuce : enregistre l’image du QR et colle-la sur ton blouson, casque ou carte d’urgences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 — En Stoemelling • Made in Belgium • Choisis ton style et fais ta part 💛
+  </footer>
+
+<script>
+  // --- Switcher de thèmes (mémorise le choix) ---
+  const buttons = document.querySelectorAll('.btn[data-theme]');
+  const body = document.body;
+  const saved = localStorage.getItem('theme') || 'theme-neon80';
+  setTheme(saved);
+  buttons.forEach(b=>{
+    b.addEventListener('click', ()=>{
+      setTheme(b.dataset.theme);
+    });
+  });
+  function setTheme(name){
+    body.className = name;
+    localStorage.setItem('theme', name);
+    buttons.forEach(x=>x.classList.toggle('active', x.dataset.theme===name));
+  }
+
+  // --- QR code (via service public qrserver) ---
+  const siteURL = "https://spiroufab.github.io/En-stoemelling/"; // <-- change ici si besoin
+  const qrImg = document.getElementById('qrcode');
+  const link = document.getElementById('siteLink');
+  link.href = siteURL;
+  link.textContent = siteURL.replace(/^https?:\/\//,'');
+  const size = 132;
+  qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(siteURL)}`;
+
+  // --- Accessibilité légère: touche T pour changer de thème rapidement ---
+  window.addEventListener('keydown', (e)=>{
+    if(e.key.toLowerCase()==='t'){
+      const order = ['theme-neon80','theme-bd','theme-biker','theme-vintage'];
+      const i = order.indexOf(body.className);
+      const next = order[(i+1)%order.length];
+      setTheme(next);
+    }
+  });
+</script>
+</body>
+</html>
