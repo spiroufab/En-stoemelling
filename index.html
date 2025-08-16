@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>En Stoemelling — Belgique XXL (80’s • BD • Biker • Vintage)</title>
+<meta name="description" content="Belgique XXL : BD, musique, films, inventions, anecdotes, expressions bruxelloises, QR, fiche d’urgence.">
+<style>
+  :root{
+    --bg:#0b0b14; --fg:#e8f6ff; --accent:#ff5cf7; --accent2:#00f0ff; --card:#141424; --muted:#b7c7d3; --link:#00f0ff;
+    --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.3)
+  }
+  body.theme-neon80{ --bg:#0b0b14; --fg:#e8f6ff; --accent:#ff5cf7; --accent2:#00f0ff; --card:#141424; --muted:#b7c7d3; --link:#00f0ff; }
+  body.theme-bd{ --bg:#fffdf7; --fg:#111; --accent:#e51b23; --accent2:#0066cc; --card:#ffffff; --muted:#555; --link:#0066cc; }
+  body.theme-biker{ --bg:#0a0a0a; --fg:#f2f2f2; --accent:#ffb000; --accent2:#9ad100; --card:#161616; --muted:#cfcfcf; --link:#9ad100; }
+  body.theme-vintage{ --bg:#f7f2e8; --fg:#2b2b2b; --accent:#9c5d2f; --accent2:#4a7a6a; --card:#fffaf0; --muted:#5f5a55; --link:#4a7a6a; }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+  a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+  header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,var(--card),transparent 60%),var(--bg);border-bottom:1px solid #ffffff14;backdrop-filter:saturate(140%) blur(6px)}
+  .wrap{max-width:1100px;margin:0 auto;padding:14px}
+  .row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  h1{margin:0;font-size:clamp(20px,4.5vw,36px)}
+  nav{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{padding:8px 12px;border:1px solid #ffffff24;border-radius:999px;background:linear-gradient(180deg,#ffffff10,transparent);cursor:pointer}
+  .chip:hover{transform:translateY(-1px)}
+  .themes{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{padding:8px 12px;border-radius:999px;border:1px solid #ffffff24;background:linear-gradient(180deg,#ffffff10,transparent);cursor:pointer;font-weight:600}
+  .btn.active{outline:2px solid var(--accent)}
+  main{padding:18px 14px}
+  section{margin:16px 0}
+  .card{background:var(--card);border:1px solid #ffffff14;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+  h2{margin:0 0 10px;font-size:clamp(18px,3.5vw,26px);color:var(--accent)}
+  .sub{color:var(--muted);font-size:.95rem;margin:-6px 0 10px}
+  .grid{display:grid;gap:12px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:680px){.g3,.g4,.g2{grid-template-columns:1fr}}
+  .tile{border:1px solid #ffffff14;border-radius:12px;overflow:hidden;background:#ffffff10}
+  .tile img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+  .cap{padding:10px;color:var(--muted);font-size:.95rem}
+  .quote{border-left:6px solid var(--accent2);padding:12px 16px;background:linear-gradient(90deg,#ffffff12,transparent);border-radius:10px;font-style:italic}
+  .small{font-size:.9rem;color:var(--muted)}
+  .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:#00000030;border:1px solid #ffffff20;border-radius:6px;padding:2px 6px}
+  .qrbox{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .qr{width:132px;height:132px;border-radius:12px;border:1px solid #ffffff24;background:#fff}
+  details[open]{animation:reveal .2s ease-in} @keyframes reveal{from{opacity:0;transform:translateY(-4px)}}
+  footer{border-top:1px solid #ffffff14;padding:20px;color:var(--muted);text-align:center;margin-top:16px}
+  .warn{background:#ffcc00; color:#222; padding:8px 10px;border-radius:8px;font-weight:600}
+</style>
+</head>
+<body class="theme-neon80">
+<header>
+  <div class="wrap">
+    <div class="row">
+      <h1>🇧🇪 En Stoemelling — Belgique XXL</h1>
+      <div class="themes" role="tablist" aria-label="Thèmes visuels">
+        <button class="btn active" data-theme="theme-neon80" role="tab" aria-selected="true">Années 80</button>
+        <button class="btn" data-theme="theme-bd" role="tab">BD belge</button>
+        <button class="btn" data-theme="theme-biker" role="tab">Biker</button>
+        <button class="btn" data-theme="theme-vintage" role="tab">Vintage</button>
+      </div>
+    </div>
+    <nav aria-label="Sections" class="wrap" style="padding-top:8px">
+      <a class="chip" href="#fiche">Fiche d’urgence</a>
+      <a class="chip" href="#colibri">Colibri</a>
+      <a class="chip" href="#galerie">Galerie</a>
+      <a class="chip" href="#anecdotes">Anecdotes</a>
+      <a class="chip" href="#films">Films cultes</a>
+      <a class="chip" href="#musique">Musique</a>
+      <a class="chip" href="#bd">BD</a>
+      <a class="chip" href="#inventions">Inventions</a>
+      <a class="chip" href="#dico">Dico brusseleir</a>
+      <a class="chip" href="#liens">Liens</a>
+      <a class="chip" href="#qr">QR</a>
+      <a class="chip" href="#xviii">18+</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- FICHE D’URGENCE -->
+  <section id="fiche">
+    <div class="card">
+      <h2>🩺 Fiche d’urgence (ICE)</h2>
+      <p class="small">Ces infos sont là pour secouristes / proches. <strong>Adresse partiellement masquée en public</strong>.</p>
+      <div class="grid g2">
+        <div>
+          <ul>
+            <li><strong>Nom</strong> : Fabian Hordies</li>
+            <li><strong>Date de naissance</strong> : 22/09/1980</li>
+            <li><strong>Groupe sanguin</strong> : <strong>A+</strong></li>
+            <li><strong>Allergies</strong> : à compléter</li>
+            <li><strong>Médecin traitant</strong> : Dr Estelle Jaspard</li>
+            <li><strong>Contact d’urgence</strong> : à compléter</li>
+            <li><strong>Adresse (publique)</strong> : 1370 Dongelberg</li>
+          </ul>
+          <details><summary>Afficher l’adresse complète (secours)</summary>
+            <p><strong>Chemin des Roches 38, 1370 Dongelberg</strong></p>
+          </details>
+          <p class="small">Pour modifier ces infos, édite le fichier <code>index.html</code> (section Fiche d’urgence).</p>
+        </div>
+        <div>
+          <span class="warn">⚠️ Moto</span>
+          <ul>
+            <li>Port d’équipements : gants, dorsale, bottes, airbag si possible</li>
+            <li>Contacts dans le smartphone : “ICE 1 / ICE 2”</li>
+            <li>QR code d’urgence : voir plus bas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLIBRI -->
+  <section id="colibri">
+    <div class="card">
+      <h2>🐦 La légende du colibri</h2>
+      <p class="quote">« Je fais ma part. » — Légende du colibri</p>
+      <details><summary>Lire l’histoire</summary>
+        <p>Un immense incendie ravage la forêt. Les animaux regardent impuissants. Seul le colibri apporte quelques gouttes d’eau. On lui dit : « Tu n’éteindras pas le feu ! ». Il répond : « Je le sais, mais je fais ma part. »</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie">
+    <div class="card">
+      <h2>🖼 Galerie belge</h2>
+      <p class="sub">Remplace les images dans <code>/images</code> par les tiennes (mêmes noms).</p>
+      <div class="grid g4">
+        <figure class="tile"><img src="images/atomium.jpg" alt="Atomium, Expo 58"><figcaption class="cap">Atomium (Expo 58)</figcaption></figure>
+        <figure class="tile"><img src="images/grand-place.jpg" alt="Grand-Place Bruxelles"><figcaption class="cap">Grand-Place</figcaption></figure>
+        <figure class="tile"><img src="images/z900.jpg" alt="Kawasaki Z900 en Belgique"><figcaption class="cap">Z900 • Paysage belge</figcaption></figure>
+        <figure class="tile"><img src="images/frites.jpg" alt="Cornet de frites"><figcaption class="cap">Cornet de frites</figcaption></figure>
+        <figure class="tile"><img src="images/moules.jpg" alt="Casserole de moules"><figcaption class="cap">Casserole de moules</figcaption></figure>
+        <figure class="tile"><img src="images/bd-spirou.jpg" alt="Clin d’œil Spirou"><figcaption class="cap">Clin d’œil à Spirou*</figcaption></figure>
+        <figure class="tile"><img src="images/bd-tintin.jpg" alt="Clin d’œil Tintin"><figcaption class="cap">Clin d’œil à Tintin*</figcaption></figure>
+        <figure class="tile"><img src="images/bob-bobette.jpg" alt="Bob et Bobette"><figcaption class="cap">Bob et Bobette*</figcaption></figure>
+      </div>
+      <p class="small">*Utilise des visuels libres (fresques, fan-arts autorisés) pour respecter les droits.</p>
+    </div>
+  </section>
+
+  <!-- ANECDOTES -->
+  <section id="anecdotes">
+    <div class="card">
+      <h2>🤯 Anecdotes & fiertés belges</h2>
+      <ul>
+        <li>Manhattan a été “acheté” en 1626 par <strong>Pierre Minuit</strong>, natif des Pays-Bas méridionaux (actuelle Belgique). <a href="https://fr.wikipedia.org/wiki/Pierre_Minuit" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>Le <strong>saxophone</strong> est belge : <strong>Adolphe Sax</strong> (Dinant). <a href="https://fr.wikipedia.org/wiki/Adolphe_Sax" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>Le <strong>Big Bang</strong> théorisé par le chanoine <strong>Georges Lemaître</strong>. <a href="https://fr.wikipedia.org/wiki/Georges_Lema%C3%AEtre" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li><strong>Cartamundi</strong> (Turnhout) fabrique des cartes à jouer pour Vegas. <a href="https://fr.wikipedia.org/wiki/Cartamundi" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>Armes : <strong>FN Herstal</strong>, un géant historique. <a href="https://fr.wikipedia.org/wiki/Fabrique_nationale_d%27Herstal" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>Astronaute : <strong>Dirk Frimout</strong>. <a href="https://fr.wikipedia.org/wiki/Dirk_Frimout" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>Écrivains : <strong>Amélie Nothomb</strong>. <a href="https://fr.wikipedia.org/wiki/Am%C3%A9lie_Nothomb" target="_blank" rel="noopener">Wikipedia</a></li>
+        <li>BD : <strong>Hergé</strong> (Tintin), <strong>Peyo</strong> (Schtroumpfs). <a href="https://fr.wikipedia.org/wiki/Herg%C3%A9" target="_blank">Hergé</a> · <a href="https://fr.wikipedia.org/wiki/Peyo" target="_blank">Peyo</a></li>
+        <li>Peinture : <strong>René Magritte</strong>. <a href="https://fr.wikipedia.org/wiki/Ren%C3%A9_Magritte" target="_blank">Wikipedia</a></li>
+        <li>Sport : <strong>Eddy Merckx</strong>, <strong>Justine Henin</strong>. <a href="https://fr.wikipedia.org/wiki/Eddy_Merckx" target="_blank">Merckx</a> · <a href="https://fr.wikipedia.org/wiki/Justine_Henin" target="_blank">Henin</a></li>
+        <li>Expo 58, symbole : <strong>Atomium</strong>. <a href="https://fr.wikipedia.org/wiki/Expo_58" target="_blank">Expo 58</a></li>
+        <li>Clin d’œil : la peintre etterbeekoise <strong>Marcelle Finné</strong>. (Hommage local)</li>
+      </ul>
+      <p class="small">À ajouter : Dr Philippe Boxho (médecine légale), “cuisinier du Sabot d’Hélène” (anecdote locale).</p>
+    </div>
+  </section>
+
+  <!-- FILMS -->
+  <section id="films">
+    <div class="card">
+      <h2>🎬 Films cultes (à revoir entre potes)</h2>
+      <div class="grid g2">
+        <div class="tile">
+          <img src="images/dikkenek.jpg" alt="Dikkenek">
+          <div class="cap"><strong>Dikkenek</strong> (2006) — bible des punchlines absurdes.
+            <br><a href="https://fr.wikipedia.org/wiki/Dikkenek" target="_blank" rel="noopener">Wikipedia</a> ·
+            <a href="https://www.youtube.com/results?search_query=Dikkenek+bande+annonce" target="_blank" rel="noopener">Bande-annonce</a>
+          </div>
+        </div>
+        <div class="tile">
+          <img src="images/cest-arrive.jpg" alt="C'est arrivé près de chez vous">
+          <div class="cap"><strong>C’est arrivé près de chez vous</strong> (1992) — faux docu culte, humour noir.
+            <br><a href="https://fr.wikipedia.org/wiki/C%27est_arriv%C3%A9_pr%C3%A8s_de_chez_vous" target="_blank">Wikipedia</a> ·
+            <a href="https://www.youtube.com/results?search_query=c%27est+arriv%C3%A9+pr%C3%A8s+de+chez+vous+bande+annonce" target="_blank">Bande-annonce</a>
+          </div>
+        </div>
+      </div>
+      <p class="small">Bonus : <a href="https://www.youtube.com/results?search_query=Tich+%C3%A0+l%27%C3%A9glise" target="_blank">« Tich à l’église »</a> (recherches YouTube)</p>
+    </div>
+  </section>
+
+  <!-- MUSIQUE -->
+  <section id="musique">
+    <div class="card">
+      <h2>🎵 Musique (écoutes belges)</h2>
+      <ul>
+        <li><strong>Jacques Brel</strong> — <a href="https://www.youtube.com/results?search_query=Jacques+Brel+best+of" target="_blank">Best of</a></li>
+        <li><strong>Toots Thielemans</strong> — « Bluesette » <a href="https://www.youtube.com/results?search_query=Toots+Thielemans+Bluesette" target="_blank">écouter</a></li>
+        <li>Playlist Spotify « en stoemeling » — <a href="https://open.spotify.com/search/en%20stoemeling" target="_blank">recherche</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BD -->
+  <section id="bd">
+    <div class="card">
+      <h2>📚 BD belges</h2>
+      <div class="grid g3">
+        <div class="tile"><img src="images/tintin-cover.jpg" alt="Tintin"><div class="cap">Tintin — <a href="https://fr.wikipedia.org/wiki/Tintin" target="_blank">Wikipedia</a></div></div>
+        <div class="tile"><img src="images/spirou-cover.jpg" alt="Spirou"><div class="cap">Spirou — <a href="https://fr.wikipedia.org/wiki/Spirou" target="_blank">Wikipedia</a></div></div>
+        <div class="tile"><img src="images/bob-bobette.jpg" alt="Bob et Bobette"><div class="cap">Bob & Bobette — <a href="https://fr.wikipedia.org/wiki/Bob_et_Bobette" target="_blank">Wikipedia</a></div></div>
+      </div>
+      <p class="small">Ajoute aussi Les Schtroumpfs, Lucky Luke (dessinateur belge), Gaston Lagaffe…</p>
+    </div>
+  </section>
+
+  <!-- INVENTIONS -->
+  <section id="inventions">
+    <div class="card">
+      <h2>🧪 Inventions & découvertes made in Belgium</h2>
+      <ul>
+        <li><strong>Saxophone</strong> — Adolphe Sax (Dinant)</li>
+        <li><strong>Théorie du Big Bang</strong> — Georges Lemaître</li>
+        <li><strong>Phénakistiscope</strong> (animation) — Joseph Plateau. <a href="https://fr.wikipedia.org/wiki/Joseph_Plateau" target="_blank">Wikipedia</a></li>
+        <li><strong>Indice de masse corporelle</strong> — Adolphe Quetelet. <a href="https://fr.wikipedia.org/wiki/Adolphe_Quetelet" target="_blank">Wikipedia</a></li>
+        <li><strong>Cartes à jouer</strong> (Cartamundi) — leader mondial basé à Turnhout</li>
+        <li><strong>Chocolat & pralines</strong> — Neuhaus, Côte d’Or… (tradition mondialement reconnue)</li>
+        <li><strong>Mercator</strong> — Gérard Mercator (Rupelmonde) projection carto. <a href="https://fr.wikipedia.org/wiki/G%C3%A9rard_Mercator" target="_blank">Wikipedia</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DICO BRUSSELEIR -->
+  <section id="dico">
+    <div class="card">
+      <h2>🗣 Dico brusseleir (ket edition)</h2>
+      <ul>
+        <li><strong>Stoemelings / Stilleke pei</strong> : en douce, discret</li>
+        <li><strong>Fieu / Ket</strong> : gars, pote</li>
+        <li><strong>Il drache</strong> : il pleut fort</li>
+        <li><strong>Ça me tire les pattes</strong> : je suis crevé</li>
+        <li><strong>Une fois</strong> : ponctuation typique</li>
+        <li><strong>Klet</strong> : bavard, grande gueule sympa</li>
+        <li><strong>Mariette</strong> : petite amie (affectueux)</li>
+        <li><strong>Zinneke</strong> : bâtard (affectueux, mix bruxellois)</li>
+        <li><strong>Brusseleir</strong> : bruxellois</li>
+        <li><strong>Rogntudju</strong> : juron liégeois</li>
+        <li><strong>Poye</strong> : gamin</li>
+        <li><strong>Quitter ses godasses</strong> : enlever ses chaussures</li>
+      </ul>
+      <details><summary>Plus d’expressions</summary>
+        <ul>
+          <li><strong>Griotte</strong> : cerise</li>
+          <li><strong>Piétonnier</strong> : zone piétonne</li>
+          <li><strong>Tomber en carafe</strong> : tomber en panne</li>
+          <li><strong>Faire stoef</strong> : frimer</li>
+          <li><strong>Une dringuelle</strong> : pourboire</li>
+          <li><strong>Brol</strong> : bazar, truc</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- LIENS UTILES -->
+  <section id="liens">
+    <div class="card">
+      <h2>🔗 Liens utiles & archives</h2>
+      <ul>
+        <li><a href="https://fr.wikipedia.org/wiki/Belgique" target="_blank">Wikipedia — Belgique</a></li>
+        <li><a href="https://www.visit.brussels/fr" target="_blank">visit.brussels</a> · <a href="https://www.walloniebelgiquetourisme.be" target="_blank">WBT</a> · <a href="https://www.visitflanders.com/fr" target="_blank">Visit Flanders</a></li>
+        <li><a href="https://www.rtbf.be" target="_blank">RTBF</a> · <a href="https://www.levif.be" target="_blank">Le Vif</a> · <a href="https://www.lesoir.be" target="_blank">Le Soir</a></li>
+        <li><a href="https://fr.wikipedia.org/wiki/Expo_58" target="_blank">Expo 58</a> · <a href="https://fr.wikipedia.org/wiki/Atomium" target="_blank">Atomium</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 18+ (GARDÉE SOBRE, NON EXPLICITE) -->
+  <section id="xviii">
+    <div class="card">
+      <h2>🔞 Zone 18+ (accès volontaire)</h2>
+      <p class="small">Contenu adulte / affaires sombres — <em>non explicite</em>, liens d’archives & articles.</p>
+      <details><summary>Entrer en connaissance de cause</summary>
+        <ul>
+          <li>Affaires criminelles marquantes (résumé non graphique). Recherches : <a href="https://fr.wikipedia.org/wiki/Affaire_Dutroux" target="_blank">Affaire Dutroux</a>, <a href="https://fr.wikipedia.org/wiki/Tueur_du_Brabant" target="_blank">Tueurs du Brabant</a>.</li>
+          <li>Scandales politiques/financiers (affaires bien connues dans la presse belge).</li>
+          <li>Industrie pour adultes en Belgique (histoire, contexte industriel), recherches générales : <a href="https://fr.wikipedia.org/wiki/Industrie_pornographique" target="_blank">Wikipedia (général)</a>.</li>
+        </ul>
+        <p class="small">Objectif : documenter l’Histoire, pas choquer. Liens vers sources publiques.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- QR -->
+  <section id="qr">
+    <div class="card">
+      <h2>📱 QR du site (scan direct)</h2>
+      <div class="qrbox">
+        <img id="qrcode" class="qr" alt="QR vers ce site">
+        <div>
+          <p>Adresse : <a id="siteLink" href="https://spiroufab.github.io/En-stoemelling/" target="_blank" rel="noopener">spiroufab.github.io/En-stoemelling</a></p>
+          <p class="small">Clique pour ouvrir l’image du QR dans un nouvel onglet et l’enregistrer.</p>
+          <p>🎁 Easter egg brusseleir : <a href="https://www.youtube.com/results?search_query=brusseleir+allez+va+ket" target="_blank" rel="noopener">« allez va, t’es un vrai ket »</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 — En Stoemelling • Belgique XXL • Fais ta part 💛
+</footer>
+
+<script>
+  // --- Thèmes (mémorisation) ---
+  const body=document.body, btns=document.querySelectorAll('.btn[data-theme]');
+  const saved=localStorage.getItem('theme')||'theme-neon80'; setTheme(saved);
+  btns.forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.theme)));
+  function setTheme(name){ body.className=name; localStorage.setItem('theme',name); btns.forEach(x=>x.classList.toggle('active', x.dataset.theme===name)); }
+
+  // --- QR code ---
+  const siteURL="https://spiroufab.github.io/En-stoemelling/"; // ← modifie si besoin
+  const size=132;
+  const qr=`https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(siteURL)}`;
+  document.getElemen
+
