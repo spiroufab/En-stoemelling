@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>En Stoemeling - La Belgique comme vous ne l’avez jamais vue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+      background: #900;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 { color: #900; }
+    .accordion {
+      background: #eee;
+      cursor: pointer;
+      padding: 15px;
+      margin: 5px 0;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      transition: 0.4s;
+    }
+    .active, .accordion:hover {
+      background: #ccc;
+    }
+    .panel {
+      padding: 0 15px;
+      display: none;
+      background: white;
+      border: 1px solid #ccc;
+    }
+    .panel p { padding: 10px 0; }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+    audio { margin: 10px 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🇧🇪 En Stoemeling</h1>
+  <p>La Belgique racontée autrement : histoires, mythes, dates, bêtises et merveilles.</p>
+</header>
+
+<nav>
+  <a href="#expressions">Expressions belges</a>
+  <a href="#histoires">Histoires surprenantes</a>
+  <a href="#dates">Dates marquantes</a>
+  <a href="#femmes">Femmes belges</a>
+  <a href="#tueurs">Tueurs belges</a>
+  <a href="#meteo">Météo</a>
+  <a href="#catastrophes">Catastrophes</a>
+  <a href="#innovations">Innovations</a>
+  <a href="#produits">Produits</a>
+  <a href="#arch">Archéologie</a>
+</nav>
+
+<!-- Expressions belges -->
+<section id="expressions">
+  <h2>💬 Expressions belges</h2>
+  <p>Découvrez les plus savoureuses expressions bruxelloises, wallonnes et flamandes :</p>
+  <ul>
+    <li><a href="https://www.rtbf.be/article/expressions-belges-100" target="_blank">Top 100 expressions belges</a></li>
+    <li><a href="https://fr.wiktionary.org/wiki/Cat%C3%A9gorie:Lexique_en_fran%C3%A7ais_de_Belgique" target="_blank">Wiktionnaire Belgique</a></li>
+  </ul>
+  <img src="images/frites.jpg" alt="Cornet de frites">
+</section>
+
+<!-- Histoires surprenantes -->
+<section id="histoires">
+  <h2>📜 Les plus surprenantes histoires des gens de Belgique</h2>
+  <p>Des anecdotes vraies ou légendaires, racontées comme des contes…</p>
+
+  <button class="accordion">1. Le facteur qui livrait aussi des miracles (Namur)</button>
+  <div class="panel"><p>On dit qu’à Namur, un facteur glissait parfois dans ses tournées des lettres d’espoir venues de nulle part…</p></div>
+
+  <button class="accordion">2. La nuit où l’Atomium s’est illuminé tout seul</button>
+  <div class="panel"><p>Une panne d’électricité générale... sauf pour l’Atomium, resté éclatant dans la nuit de Bruxelles.</p><img src="images/atomium.jpg"></div>
+
+  <button class="accordion">3. La dame aux cent chapeaux (Liège)</button>
+  <div class="panel"><p>Elle ne sortait jamais deux fois avec le même couvre-chef, jusqu’à devenir légende locale.</p></div>
+
+  <button class="accordion">4. Le coq de Mons qui chanta avant l’aube</button>
+  <div class="panel"><p>Un coq sauva toute une garnison… en réveillant les soldats avant une attaque surprise.</p></div>
+
+  <button class="accordion">5. Le violoniste des marées à Ostende</button>
+  <div class="panel"><p>Il jouait du violon face à la mer, et les pêcheurs juraient que ses notes calmaient les tempêtes.</p></div>
+
+  <button class="accordion">6. Le tram fantôme de la Grand-Place</button>
+  <div class="panel"><p>Certains disent l’avoir vu passer, luisant, traversant la place pavée… sans rails.</p><img src="images/grand-place.jpg"></div>
+
+  <button class="accordion">7. L’enfant qui offrit son ballon au roi</button>
+  <div class="panel"><p>Pendant une visite royale, un enfant bruxellois tendit son ballon à Léopold III, qui joua avec lui.</p></div>
+
+  <button class="accordion">8. La maison aux fenêtres toujours ouvertes</button>
+  <div class="panel"><p>À Bruxelles, une maison mystérieuse dont les fenêtres n’ont jamais été fermées, par superstition.</p></div>
+
+  <button class="accordion">9. La vieille brasserie où la bière soignait les peines</button>
+  <div class="panel"><p>À Louvain, on disait que chaque chope servie emportait un chagrin de moins.</p><img src="images/moules.jpg"></div>
+
+  <button class="accordion">10. Le boulanger qui pétrissait ses rêves</button>
+  <div class="panel"><p>À Huy, un boulanger racontait ses rêves… et chaque pain avait une saveur unique.</p></div>
+</section>
+
+<!-- Dates marquantes -->
+<section id="dates">
+  <h2>📅 Dates marquantes de la Belgique</h2>
+  <ul>
+    <li>1830 : Indépendance de la Belgique</li>
+    <li>1999 : Passage à l’euro</li>
+    <li>2002 : Fin du franc belge</li>
+    <li>2010-2011 : 541 jours sans gouvernement</li>
+  </ul>
+</section>
+
+<!-- Femmes belges -->
+<section id="femmes">
+  <h2>👩‍🦰 Femmes belges remarquables</h2>
+  <p>Des pionnières, des artistes, des héroïnes :</p>
+  <ul>
+    <li><b>Justine Henin</b> – Tennis, élégance et force.</li>
+    <li><b>Marguerite Yourcenar</b> – Première femme élue à l’Académie française.</li>
+    <li><b>Audrey Hepburn</b> – Née à Ixelles, icône mondiale du cinéma.</li>
+  </ul>
+  <img src="images/bd-tintin.jpg">
+</section>
+
+<!-- Tueurs belges -->
+<section id="tueurs">
+  <h2>🔪 Les tueurs belges</h2>
+  <p>Un sombre chapitre de l’histoire criminelle du pays :</p>
+  <ul>
+    <li><a href="https://fr.wikipedia.org/wiki/Tueurs_du_Brabant" target="_blank">Les Tueurs du Brabant</a></li>
+    <li>Marc Dutroux – tristement célèbre.</li>
+    <li>André Cools (affaire politique complexe).</li>
+  </ul>
+</section>
+
+<!-- Météo -->
+<section id="meteo">
+  <h2>🌦️ Météo des 100 dernières années</h2>
+  <p>Résumé : plus d’orages intenses, des hivers plus doux, des étés plus secs depuis 1950.</p>
+  <a href="https://www.meteo.be/fr/climat" target="_blank">Voir les archives météo belges</a>
+</section>
+
+<!-- Catastrophes -->
+<section id="catastrophes">
+  <h2>🔥 Catastrophes en Belgique</h2>
+  <ul>
+    <li>1956 : Catastrophe minière du Bois du Cazier (262 morts).</li>
+    <li>1967 : Incendie de l’Innovation à Bruxelles.</li>
+    <li>2010 : Collision de trains à Buizingen.</li>
+  </ul>
+</section>
+
+<!-- Innovations -->
+<section id="innovations">
+  <h2>💡 Innovations & précurseurs belges</h2>
+  <ul>
+    <li>Saxophone (Adolphe Sax, Dinant).</li>
+    <li>Bande dessinée moderne (Tintin, Spirou).</li>
+    <li>Cartographie du Big Bang (Georges Lemaître).</li>
+  </ul>
+</section>
+
+<!-- Produits -->
+<section id="produits">
+  <h2>🍫 Produits commerciaux belges</h2>
+  <p>Chocolat, pralines, bière, frites, spéculoos, café…</p>
+  <img src="images/bd-spirou.jpg">
+</section>
+
+<!-- Archéologie -->
+<section id="arch">
+  <h2>🏺 Découvertes archéologiques belges</h2>
+  <ul>
+    <li>Trésors gallo-romains (Tongres, Arlon).</li>
+    <li>Vestiges celtiques et mérovingiens.</li>
+    <li>Sites préhistoriques de la Lesse et de la Meuse.</li>
+  </ul>
+</section>
+
+<!-- Liens externes -->
+<section>
+  <h2>🔗 Capsules “Ceci explique cela”</h2>
+  <p><a href="https://www.rtbf.be/emission/ceci-explique-cela" target="_blank">Voir les capsules RTBF</a></p>
+</section>
+
+<footer>
+  <p>© En Stoemeling – Créé avec passion pour la Belgique 🇧🇪</p>
+</footer>
+
+<script>
+  // Accordion
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  }
+</script>
+
+</body>
+</html>
