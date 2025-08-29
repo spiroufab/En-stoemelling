@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En Stoemeling - Accordion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      margin-top: 70px;
+      padding: 20px;
+    }
+    details {
+      background: #fff;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    summary {
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      background: #444;
+      color: #fff;
+    }
+    .content {
+      padding: 15px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    audio, video {
+      width: 100%;
+      margin: 10px 0;
+    }
+    a {
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#bloc1">Bloc 1</a>
+      <a href="#bloc5">Bloc 5</a>
+      <a href="#bloc10">Bloc 10</a>
+      <a href="#bloc15">Bloc 15</a>
+      <a href="#bloc20">Bloc 20</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- Bloc 1 -->
+    <details id="bloc1">
+      <summary>Bloc 1 - Introduction</summary>
+      <div class="content">
+        <p>Bienvenue sur la page <b>En Stoemeling</b> 🎉</p>
+        <p>Ce site regroupe 20 blocs sous forme d’accordion.</p>
+        <img src="https://picsum.photos/600/300" alt="Image exemple">
+      </div>
+    </details>
+
+    <!-- Bloc 2 -->
+    <details>
+      <summary>Bloc 2 - Citation</summary>
+      <div class="content">
+        <p><i>« L’union fait la force »</i> – devise de la Belgique 🇧🇪</p>
+      </div>
+    </details>
+
+    <!-- Bloc 3 -->
+    <details>
+      <summary>Bloc 3 - Musique</summary>
+      <div class="content">
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Ton navigateur ne supporte pas l’audio.
+        </audio>
+      </div>
+    </details>
+
+    <!-- Bloc 4 -->
+    <details>
+      <summary>Bloc 4 - Vidéo</summary>
+      <div class="content">
+        <video controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Ton navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </details>
+
+    <!-- Bloc 5 -->
+    <details id="bloc5">
+      <summary>Bloc 5 - Histoire belge</summary>
+      <div class="content">
+        <p>Les <b>frites belges</b> sont mondialement connues 🍟.</p>
+        <a href="https://fr.wikipedia.org/wiki/Frite" target="_blank">Lire sur Wikipedia</a>
+      </div>
+    </details>
+
+    <!-- Bloc 6 -->
+    <details>
+      <summary>Bloc 6 - Image externe</summary>
+      <div class="content">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Grand_Place_Brussels_Belgium_Panorama.jpg" alt="Grand-Place Bruxelles">
+      </div>
+    </details>
+
+    <!-- Bloc 7 -->
+    <details>
+      <summary>Bloc 7 - Lien interne</summary>
+      <div class="content">
+        <p>👉 Retour au <a href="#bloc1">Bloc 1</a>.</p>
+      </div>
+    </details>
+
+    <!-- Bloc 8 -->
+    <details>
+      <summary>Bloc 8 - Expression bruxelloise</summary>
+      <div class="content">
+        <p><b>En stoemeling</b> = en douce, en cachette 😉.</p>
+      </div>
+    </details>
+
+    <!-- Bloc 9 -->
+    <details>
+      <summary>Bloc 9 - Liste</summary>
+      <div class="content">
+        <ul>
+          <li>Bière 🍺</li>
+          <li>Frites 🍟</li>
+          <li>Chocolat 🍫</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Bloc 10 -->
+    <details id="bloc10">
+      <summary>Bloc 10 - Vidéo externe</summary>
+      <div class="content">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/uj3Lq7Gu94Y" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </details>
+
+    <!-- Bloc 11 -->
+    <details>
+      <summary>Bloc 11 - Anecdote</summary>
+      <div class="content">
+        <p>Le <b>Manneken Pis</b> a plus de 1000 costumes 👕.</p>
+      </div>
+    </details>
+
+    <!-- Bloc 12 -->
+    <details>
+      <summary>Bloc 12 - Audio court</summary>
+      <div class="content">
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </details>
+
+    <!-- Bloc 13 -->
+    <details>
+      <summary>Bloc 13 - Citation</summary>
+      <div class="content">
+        <p><i>« Bruxelles, ma belle »</i> – Jacques Brel 🎶</p>
+      </div>
+    </details>
+
+    <!-- Bloc 14 -->
+    <details>
+      <summary>Bloc 14 - Photo perso</summary>
+      <div class="content">
+        <p>Tu peux remplacer l’image ci-dessous par la tienne :</p>
+        <img src="https://picsum.photos/500/300" alt="Image perso">
+      </div>
+    </details>
+
+    <!-- Bloc 15 -->
+    <details id="bloc15">
+      <summary>Bloc 15 - Fun</summary>
+      <div class="content">
+        <p>Les Belges disent <b>dringuelle</b> pour dire pourboire 🍻.</p>
+      </div>
+    </details>
+
+    <!-- Bloc 16 -->
+    <details>
+      <summary>Bloc 16 - Tableau</summary>
+      <div class="content">
+        <table border="1" cellpadding="5">
+          <tr><th>Ville</th><th>Spécialité</th></tr>
+          <tr><td>Liège</td><td>Gaufres 🧇</td></tr>
+          <tr><td>Bruxelles</td><td>Moules-frites 🥘</td></tr>
+        </table>
+      </div>
+    </details>
+
+    <!-- Bloc 17 -->
+    <details>
+      <summary>Bloc 17 - Lien externe</summary>
+      <div class="content">
+        <a href="https://visit.brussels/" target="_blank">Visiter Bruxelles</a>
+      </div>
+    </details>
+
+    <!-- Bloc 18 -->
+    <details>
+      <summary>Bloc 18 - Humour belge</summary>
+      <div class="content">
+        <p>Pourquoi les plongeurs belges plongent-ils toujours en arrière et jamais en avant ?<br>
+        👉 Parce que sinon ils tombent dans le bateau 😆</p>
+      </div>
+    </details>
+
+    <!-- Bloc 19 -->
+    <details>
+      <summary>Bloc 19 - Galerie</summary>
+      <div class="content">
+        <img src="https://picsum.photos/300/200?random=1">
+        <img src="https://picsum.photos/300/200?random=2">
+        <img src="https://picsum.photos/300/200?random=3">
+      </div>
+    </details>
+
+    <!-- Bloc 20 -->
+    <details id="bloc20">
+      <summary>Bloc 20 - Conclusion</summary>
+      <div class="content">
+        <p>Merci d’avoir exploré les 20 blocs 🙏</p>
+        <p><a href="#bloc1">Retour au début</a></p>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>
